@@ -1,8 +1,9 @@
+import tkinter as tk
 from components.clock.clock import read_config, get_time_in_timezone
 from components.Screen_resolution.Screen_resolution import calculate_screen_size
 from components.gps_coordinates.gps_coordinates import get_gps_coordinates
 from components.get_weather.get_weather import get_weather
-import tkinter as tk
+from components.wifi_connection.wifi_connection import get_wifi_strength, draw_wifi_icon, draw_no_wifi_icon, draw_arc, draw_circle
 from datetime import datetime
 import pytz
 
@@ -17,6 +18,18 @@ def update_weather():
     weather_info = get_weather(lat, lon)
     weather_label.config(text=weather_info)
     root.after(60000, update_weather)  # Update weather every 60 seconds
+
+def update_wifi_signal():
+    """
+    Updates the Wi-Fi signal strength display.
+    """
+    strength = get_wifi_strength()
+    canvas.delete("all")  # Clear previous drawings
+    if strength is None:
+        draw_no_wifi_icon(canvas)
+    else:
+        draw_wifi_icon(canvas, strength)
+    root.after(1000, update_wifi_signal)  # Update every second
 
 config_file_path = 'File_Management/config/.config'
 
@@ -44,24 +57,29 @@ root = tk.Tk()
 
 # Set the window to be transparent
 root.attributes("-transparentcolor", "black")  # Set black as the transparent color
-root.attributes("-alpha", 0.1)  # Set window transparency (0.0 = fully transparent, 1.0 = fully opaque)
+root.attributes("-alpha", 0.5)  # Set window transparency (0.0 = fully transparent, 1.0 = fully opaque)
 
 # Set the geometry of the window
 root.geometry(f"{screen_width_pixels}x{screen_height_pixels}")
 
 # Create a label to display the time
 time_label = tk.Label(root, font=("Helvetica", 24), fg="#000000")  # Dark background, black text
-time_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+time_label.place(relx=0.05, rely=0.05, anchor=tk.NW)  # Placing label at top-left corner
 
 # Create a label to display the weather
 weather_label = tk.Label(root, font=("Helvetica", 24), fg="#000000")  # Dark background, black text
-weather_label.place(relx=0.5, rely=0.6, anchor=tk.CENTER)
+weather_label.place(relx=0.05, rely=0.1, anchor=tk.NW)  # Placing label below time label
+
+canvas = tk.Canvas(root, width=50, height=50, bg="white", highlightthickness=0)
+canvas.place(relx=1.0, rely=0.0, anchor=tk.NE, x=-20, y=20)  # Placing canvas below weather label
 
 # Start the time update loop
 update_time()
 
 # Start the time and weather update loops
 update_weather()
+
+update_wifi_signal()
 
 # Start the Tkinter event loop
 root.mainloop()
