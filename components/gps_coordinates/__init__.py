@@ -1,0 +1,1 @@
+from .gps_coordinates import get_gps_coordinates
