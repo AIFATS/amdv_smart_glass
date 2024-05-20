@@ -1,1 +1,10 @@
 gps
+qrcode
+comtypes
+getmac
+pyzbar
+sqlite3
+pywifi
+pytz
+requests
+psutil

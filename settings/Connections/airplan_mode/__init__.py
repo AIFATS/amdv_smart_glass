@@ -1,0 +1,1 @@
+from .airplain_mode import set_airplane_mode
