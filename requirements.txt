@@ -8,3 +8,4 @@ pywifi
 pytz
 requests
 psutil
+pygame
