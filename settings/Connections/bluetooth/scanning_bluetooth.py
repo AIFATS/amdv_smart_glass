@@ -1,5 +1,9 @@
 import subprocess
 
+"""
+scann the bluetooth
+"""
+
 def scan_bluetooth():
     try:
         output = subprocess.check_output(["hcitool", "scan"], universal_newlines=True)

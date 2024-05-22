@@ -3,6 +3,10 @@ import sqlite3
 import psutil
 from datetime import datetime, timedelta
 
+"""
+update the data usage in sql db
+"""
+
 # Database file path
 db_path = 'File_Management/config/Data_usage/data_usage.sql'
 

@@ -6,6 +6,13 @@ import os
 from pyzbar.pyzbar import decode
 import getmac
 
+"""
+get wifi detials 
+   SSID
+   MAC Address
+   IP Address
+"""
+
 # Database file path
 db_path = 'File_Management/Database/wifi_saved_list.db'
 

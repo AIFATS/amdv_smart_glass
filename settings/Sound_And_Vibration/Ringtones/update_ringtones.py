@@ -1,5 +1,9 @@
 import os
 
+"""
+update the ringtones in config file
+"""
+
 # Define the directory path
 directory_path = 'File_Management/config/Ringtone_&_notification/ringtones'
 config_file = 'File_Management/config/.config'

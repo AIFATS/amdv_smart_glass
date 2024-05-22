@@ -1,5 +1,7 @@
 import os
-
+"""
+update the notification in config file
+"""
 # Define the directory path
 directory_path = 'File_Management/config/Ringtone_&_notification/notification'
 config_file = 'File_Management/config/.config'

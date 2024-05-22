@@ -1,3 +1,8 @@
+
+"""
+calculate screen size and apply on screen
+"""
+
 def calculate_screen_size(throw_ratio, distance, aspect_ratio_width, aspect_ratio_height):
     # Calculate the width of the projected image
     image_width = distance / throw_ratio

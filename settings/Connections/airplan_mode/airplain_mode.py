@@ -1,5 +1,9 @@
 import subprocess
 
+"""
+airplane mode
+"""
+
 def set_airplane_mode(state):
     """
     Toggle airplane mode on or off.

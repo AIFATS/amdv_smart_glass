@@ -5,6 +5,12 @@ from contextlib import closing
 from pywifi import PyWiFi, const, Profile
 import pywifi
 
+
+"""
+read the wifi saved in db 
+connect the wifi if saved
+"""
+
 # Database file path
 db_path = 'File_Management/Database/wifi_saved_list.db'
 

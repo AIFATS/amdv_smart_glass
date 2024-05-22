@@ -1,5 +1,9 @@
 import subprocess
 
+"""
+scan the wifi 
+"""
+
 def scan_wifi():
     try:
         output = subprocess.check_output(["iwlist", "wlan0", "scan"], universal_newlines=True)

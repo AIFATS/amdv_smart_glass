@@ -2,6 +2,10 @@ import os
 from datetime import datetime
 import pytz
 
+"""
+get clock time with config
+"""
+
 def read_config(file_path):
     config = {}
     with open(file_path, 'r') as file:

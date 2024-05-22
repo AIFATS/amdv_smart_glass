@@ -1,6 +1,10 @@
 import os
 import pygame
 
+"""
+play the ringtones audio
+"""
+
 # Define the directory path
 directory_path = 'File_Management/config/Ringtone_&_notification/ringtones'
 

@@ -1,6 +1,10 @@
 import tkinter as tk
 import psutil
 
+"""
+get wifi symbol on wallpaper
+"""
+
 def get_wifi_strength():
     """
     Fetches the Wi-Fi signal strength using psutil.

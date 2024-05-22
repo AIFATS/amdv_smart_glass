@@ -1,5 +1,9 @@
 import requests
 
+"""
+get weather with api with config
+"""
+
 def read_api_key():
     api_config_file_path = 'File_Management/config/api.config'
     try:

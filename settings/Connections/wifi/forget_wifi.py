@@ -2,6 +2,10 @@ import os
 import sqlite3
 from pywifi import PyWiFi, const
 
+"""
+remove the wifi in db file
+"""
+
 # Database file path
 db_path = 'File_Management/Database/wifi_saved_list.db'
 

@@ -7,6 +7,13 @@ from components.wifi_connection.wifi_connection import get_wifi_strength, draw_w
 from datetime import datetime
 import pytz
 
+"""
+till now over 
+time
+weather
+wifi signal symbol
+"""
+
 # Function to update the time label
 def update_time():
     current_time = get_time_in_timezone(time_zone).strftime('%Y-%m-%d %H:%M')

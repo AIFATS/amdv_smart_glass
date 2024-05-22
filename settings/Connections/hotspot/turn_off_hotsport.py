@@ -1,5 +1,9 @@
 import subprocess
 
+"""
+turn off the hotspot
+"""
+
 # Path to the configuration file
 config_path = 'File_Management/config/.config'
 

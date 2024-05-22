@@ -1,3 +1,8 @@
+
+"""
+get gps latitude longitude
+"""
+
 def get_gps_coordinates(device_file='/dev/gps'):
     try:
         with open(device_file, 'r') as f:

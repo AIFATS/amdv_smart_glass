@@ -3,6 +3,10 @@ import os
 import time
 from contextlib import closing
 
+"""
+save the wifi password in db
+"""
+
 # Database file paths
 sql_file_path = 'File_Management/Database/wifi_saved_list.sql'
 db_path = 'File_Management/Database/wifi_saved_list.db'
