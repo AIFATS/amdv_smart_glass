@@ -1,0 +1,2 @@
+from .dispay_brightness import get_brightness_path, get_max_brightness_path, set_brightness, change_brightness
+from .auto_adjust_brightness import get_brightness_path, get_max_brightness_path, set_brightness, auto_adjust_brightness
