@@ -1,0 +1,1 @@
+from .requirements_file_install import install_requirements
